@@ -1,0 +1,133 @@
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #3b3b3b;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        margin: 0;
+    }
+    
+    html,
+    body,
+    #map {
+        height: 100%;
+        width: 100vw;
+    }
+    
+    h2 {
+        margin: 0px;
+    }
+    
+    .row {
+        display: table-row;
+        background: #f6f6f6;
+    }
+    
+    .row:nth-of-type(odd) {
+        background: #e9e9e9;
+    }
+    
+    .wrapper {
+        margin: 0 auto;
+        padding: 40px;
+        max-width: 800px;
+    }
+    
+    .table {
+        margin: 0 0 40px 0;
+        width: 100%;
+        display: table;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        /* overflow: scroll; */
+    }
+    
+    @media screen and (max-width: 580px) {
+        .table {
+            display: block;
+        }
+    }
+    
+    .row {
+        display: table-row;
+        background: white;
+        color: black;
+    }
+    
+    .row:nth-of-type(odd) {
+        background: black;
+        color: white;
+    }
+    
+    .row.header {
+        font-weight: 900;
+        color: #ffffff;
+        background: #ea6153;
+    }
+    
+    .row.green {
+        background: #27ae60;
+    }
+    
+    .row.blue {
+        background: #2980b9;
+    }
+    
+    @media screen and (max-width: 580px) {
+        .row {
+            padding: 8px 0;
+            display: block;
+        }
+    }
+    
+    .cell {
+        padding: 6px 12px;
+        display: table-cell;
+    }
+    
+    @media screen and (max-width: 580px) {
+        .cell {
+            padding: 2px 12px;
+            display: block;
+        }
+    }
+    
+    #sidewindow {
+        width: auto;
+        height: 100vh;
+        z-index: 999;
+        background-color: #ffffff85;
+        position: fixed;
+        top: 0;
+        right: 0;
+        opacity: 0.8;
+        overflow-y: auto;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        #sidewindow {
+            visibility: hidden;
+        }
+    }
+    
+    #topwindow {
+        width: auto;
+        height: auto;
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-left: 57px;
+        color: white;
+        background-color: black;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        #topwindow {
+            width: 100vw;
+        }
+    }
