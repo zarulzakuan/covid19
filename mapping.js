@@ -57,9 +57,9 @@ txtFile.onreadystatechange = function() {
                                     "coordinates": [country[countryUpper].long, country[countryUpper].lat]
                                 },
                                 "properties": {
-                                    "country": "<h2>" + line[1] + "</h2><table><tr><td><b>Cases:</b></td><td>" + line[2] + "</td></tr><tr><td><b>Deaths:</b></td><td>" + line[3] + "</td></tr></table>",
+                                    "country": "<h2>" + line[1] + "</h2><table><tr><td><b>Cases:</b></td><td>" + line[2] + "</td></tr><tr><td><b>Deaths:</b></td><td>" + line[4] + "</td></tr></table>",
                                     "casecount": line[2],
-                                    "deathcount": line[3],
+                                    "deathcount": line[4],
                                     "radius": radius
                                 }
                             }
@@ -77,7 +77,7 @@ txtFile.onreadystatechange = function() {
                                     ' + line[2] + ' \
                                 </div> \
                                 <div class="cell" style="color:red;font-size: 20px;"> \
-                                    ' + line[3] + ' \
+                                    ' + line[4] + ' \
                                 </div> \
                             </div>';
 
@@ -160,6 +160,18 @@ txtFile.onreadystatechange = function() {
 txtFile.send(null);
 
 // read report
+
+function togglemenu(){
+    var sidewindow = document.getElementById("sidewindow")
+    var dropdownwindow = document.getElementById("dropdownwindow")
+    if (sidewindow.style.visibility === "hidden") {
+        sidewindow.style.visibility = "visible"
+        dropdownwindow.style.visibility = "hidden"
+    } else {
+        sidewindow.style.visibility = "hidden"
+        dropdownwindow.style.visibility = "visible"
+    }
+}
 
 function CSVToArray(strData, strDelimiter) {
     // Check to see if the delimiter is defined. If not,
